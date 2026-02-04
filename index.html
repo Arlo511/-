@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="光影与留白 - 精致摄影作品展示网站">
+    <title>光影与留白 | 摄影作品集</title>
+    
+    <!-- 引入字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 自定义光标 -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- 加载遮罩 -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg viewBox="0 0 100 100" class="logo-svg">
+                    <circle cx="50" cy="50" r="45" stroke="currentColor" fill="none" stroke-width="1"/>
+                    <circle cx="50" cy="50" r="30" stroke="currentColor" fill="none" stroke-width="0.5"/>
+                    <circle cx="50" cy="50" r="15" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="loader-text">光影与留白</div>
+        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <svg viewBox="0 0 100 100" class="logo-svg">
+                    <circle cx="50" cy="50" r="45" stroke="currentColor" fill="none" stroke-width="1"/>
+                    <circle cx="50" cy="50" r="30" stroke="currentColor" fill="none" stroke-width="0.5"/>
+                    <circle cx="50" cy="50" r="15" fill="currentColor"/>
+                </svg>
+            </a>
+            <button class="nav-toggle" aria-label="导航菜单">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#gallery" class="nav-link">作品集</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 移动端导航菜单 -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">首页</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">作品集</a></li>
+                <li><a href="#about" class="mobile-nav-link">关于</a></li>
+                <li><a href="#contact" class="mobile-nav-link">联系</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <p>光影与留白</p>
+                <p>捕捉生活中的每一个瞬间</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <!-- 首页 Hero 区域 -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1920&q=80" alt="摄影作品" class="hero-image">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-title-wrapper">
+                    <h1 class="hero-title">
+                        <span class="title-line" data-delay="0">光影</span>
+                        <span class="title-line" data-delay="0.1">与</span>
+                        <span class="title-line" data-delay="0.2">留白</span>
+                    </h1>
+                    <p class="hero-subtitle">捕捉生活中的每一个瞬间</p>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <div class="scroll-line"></div>
+                    <span>向下滚动</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 作品画廊区域 -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">作品集</h2>
+                    <p class="section-subtitle">用心感受，用镜头记录</p>
+                </div>
+                
+                <!-- 分类筛选 -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="landscape">风光</button>
+                    <button class="filter-btn" data-filter="portrait">人像</button>
+                    <button class="filter-btn" data-filter="urban">城市</button>
+                    <button class="filter-btn" data-filter="abstract">抽象</button>
+                </div>
+                
+                <!-- 作品网格 -->
+                <div class="gallery-grid">
+                    <article class="gallery-item" data-category="landscape">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="山水之间" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">山水之间</h3>
+                                    <p class="item-category">风光摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="portrait">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="时光之眸" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">时光之眸</h3>
+                                    <p class="item-category">人像摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="urban">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" alt="城市森林" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">城市森林</h3>
+                                    <p class="item-category">城市摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="abstract">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80" alt="光影游戏" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">光影游戏</h3>
+                                    <p class="item-category">抽象摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="landscape">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80" alt="晨曦" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">晨曦</h3>
+                                    <p class="item-category">风光摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="portrait">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80" alt="无声的诉说" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">无声的诉说</h3>
+                                    <p class="item-category">人像摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="urban">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80" alt="夜行者" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">夜行者</h3>
+                                    <p class="item-category">城市摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" data-category="abstract">
+                        <div class="item-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80" alt="色彩的诗" class="item-image" loading="lazy">
+                            <div class="item-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="item-title">色彩的诗</h3>
+                                    <p class="item-category">抽象摄影</p>
+                                    <span class="view-btn">查看作品</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- 加载更多按钮 -->
+                <div class="gallery-load-more">
+                    <button class="load-more-btn">
+                        <span>加载更多</span>
+                        <svg viewBox="0 0 24 24" class="btn-icon">
+                            <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 关于区域 -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-frame">
+                            <img src="https://images.unsplash.com/photo-1554048612-387768052bf7?w=600&q=80" alt="摄影师肖像" class="about-image">
+                        </div>
+                        <div class="about-image-accent"></div>
+                    </div>
+                    <div class="about-text-wrapper">
+                        <h2 class="about-title">关于摄影师</h2>
+                        <p class="about-lead">每一次按下快门，都是与世界的对话。</p>
+                        <div class="about-description">
+                            <p>我是一名专注于捕捉瞬间之美的摄影师。我相信，最好的照片不是那些技术完美的，而是那些能够触动人心的。</p>
+                            <p>在我的镜头下，光影有了生命，平凡的瞬间变成了永恒的艺术。无论是壮阔的自然风光，还是细腻的人像表情，我都致力于用最真挚的情感去记录。</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="8">0</span>
+                                <span class="stat-label">年摄影经验</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="200">0</span>
+                                <span class="stat-label">合作客户</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="50">0</span>
+                                <span class="stat-label">获奖作品</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="about-cta-btn">与我合作</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 联系方式区域 -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="contact-title">联系</h2>
+                        <p class="contact-subtitle">让镜头讲述您的故事</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-label">邮箱</span>
+                                <a href="mailto:hello@lensvoid.com" class="contact-value">hello@lensvoid.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">电话</span>
+                                <a href="tel:+1234567890" class="contact-value">+1 (234) 567-890</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">工作室</span>
+                                <span class="contact-value">上海市静安区南京西路 888 号</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" fill="none"/>
+                                    <circle cx="12" cy="12" r="4" stroke="currentColor" fill="none"/>
+                                    <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="WeChat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 15c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4z" stroke="currentColor" fill="none"/>
+                                    <circle cx="15" cy="9" r="2" stroke="currentColor" fill="none"/>
+                                    <circle cx="19" cy="12" r="1" fill="currentColor"/>
+                                    <path d="M7 8a3 3 0 013-3h4" stroke="currentColor" fill="none"/>
+                                    <path d="M4 10c0-2 2-4 4-4s4 2 4 4" stroke="currentColor" fill="none"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="500px">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none"/>
+                                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                                    <circle cx="12" cy="2" r="1" fill="currentColor"/>
+                                    <circle cx="12" cy="22" r="1" fill="currentColor"/>
+                                    <circle cx="2" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="22" cy="12" r="1" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Behance">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M2 2h6v6H2zM2 16h6v6H2zM16 2h6v6h-6zM16 10h6v6h-6z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required class="form-input">
+                            <label for="name" class="form-label">姓名</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required class="form-input">
+                            <label for="email" class="form-label">邮箱</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required class="form-input">
+                                <option value="" disabled selected></option>
+                                <option value="portrait">人像摄影</option>
+                                <option value="commercial">商业摄影</option>
+                                <option value="wedding">婚礼摄影</option>
+                                <option value="other">其他</option>
+                            </select>
+                            <label for="service" class="form-label">服务类型</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required class="form-input form-textarea"></textarea>
+                            <label for="message" class="form-label">您的需求</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>发送消息</span>
+                            <svg viewBox="0 0 24 24" class="btn-icon">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 灯箱弹窗 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="关闭">
+            <svg viewBox="0 0 24 24">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            </svg>
+        </button>
+        <button class="lightbox-prev" aria-label="上一张">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            </svg>
+        </button>
+        <button class="lightbox-next" aria-label="下一张">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="灯箱图片" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-category" id="lightboxCategory"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" stroke="currentColor" fill="none" stroke-width="1"/>
+                        <circle cx="50" cy="50" r="30" stroke="currentColor" fill="none" stroke-width="0.5"/>
+                        <circle cx="50" cy="50" r="15" fill="currentColor"/>
+                    </svg>
+                    <span>光影与留白</span>
+                </div>
+                <p class="footer-text">© 2024 光影与留白. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 引入脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
