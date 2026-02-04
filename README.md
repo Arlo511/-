@@ -1,14 +1,3 @@
----
-AIGC:
-    ContentProducer: Minimax Agent AI
-    ContentPropagator: Minimax Agent AI
-    Label: AIGC
-    ProduceID: 7ee8074dbbc71ee8299693ed16700732
-    PropagateID: 7ee8074dbbc71ee8299693ed16700732
-    ReservedCode1: 304502210092e79f351f78507c1a6a749f91219d7c28e46cf51a1e99694e6412038f3deb8902205bdf3c44d1769c034ff8a2d370b5df4dd305fdf8cf6522a8cdf1706a7a4b2af8
-    ReservedCode2: 30440220601a387b4cb81eb47174147e3c0628dd64cea56ce117eea08198667c162f0d13022053b1cfcc3885cc1a31e89863bf4b2ccdf3ccef7520b094dca7f4ca44874f0fbd
----
-
 # 光影与留白 —— 摄影作品展示网站
 
 ## 项目简介
